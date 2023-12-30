@@ -16,6 +16,7 @@ class Categories(models.Model):
     def __str__(self):
         return self.name
 
+
 class Products(models.Model):
     name = models.CharField(max_length=150, unique=True, verbose_name="Название")
     slug = models.SlugField(
@@ -38,6 +39,6 @@ class Products(models.Model):
         db_table = "product"
         verbose_name = "продукт"
         verbose_name_plural = "продукты"
-        
+
     def __str__(self):
         return f'{self.name} Количество: {self.quantity}'
